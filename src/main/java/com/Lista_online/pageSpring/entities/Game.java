@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 import java.util.Objects;
 
-
+/*anotação para gerar uma entidade e para criar a tabela e nomear*/
 @Entity
 @Table(name = "tb_game")
 public class Game {
