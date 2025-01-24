@@ -1,12 +1,14 @@
 package com.Lista_online.pageSpring.entities;
 
 import jakarta.persistence.*;
+import lombok.NoArgsConstructor;
 
 import java.util.Objects;
 
 /*anotação para gerar uma entidade e para criar a tabela e nomear*/
 @Entity
 @Table(name = "tb_game")
+@NoArgsConstructor  //instalei lombok e anotação pq o construtor precisava criar um vazio
 public class Game {
 
     @Id
@@ -24,6 +26,7 @@ public class Game {
     private String shortDescription;
     @Column(columnDefinition = "TEXT")
     private String longDescription;
+
 
     public Game(Long id, String title, Integer year, String genre, String platforms, Double score, String imgUrl, String shortDescription, String longDescription) {
         this.id = id;
